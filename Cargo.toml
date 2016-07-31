@@ -1,7 +1,7 @@
 [package]
 name = "ransid"
 version = "0.1.0"
-authors = ["Russell Mackenzie<russmackdev@gmail.com"]
+authors = ["Russell Mackenzie <russmackdev@gmail.com>"]
 
 [dependencies]
 

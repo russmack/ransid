@@ -1,6 +1,6 @@
 # ransid
 
-Rust library providing colour and style for the terminal.
+Rust library providing ansi colour and style for the terminal.
 
 ## Usage
 Run the example:
