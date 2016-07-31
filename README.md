@@ -5,7 +5,8 @@ Rust library providing ansi colour and style for the terminal.
 ## Usage
 Run the example:
 ```
-cargo run examples/example.go
+cargo build --release
+./target/release/ransid-example
 ```
 Use the library:
 ```
