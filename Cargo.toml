@@ -2,6 +2,13 @@
 name = "ransid"
 version = "0.1.0"
 authors = ["Russell Mackenzie <russmackdev@gmail.com>"]
+description = "ANSI colour and styling for terminal text."
+documentation = "https://github.com/russmack/ransid"
+homepage = "https://github.com/russmack/ransid"
+repository = "https://github.com/russmack/ransid.git"
+readme = "README.md"
+keywords = ["ansi", "commandline", "terminal", "colour"]
+license-file = "LICENSE.txt"
 
 [dependencies]
 
@@ -12,5 +19,5 @@ src = "src/lib.rs"
 
 [[bin]]
 name = "ransid-example"
-src = "src/bin/main.rs"
+src = "examples/main.rs"
 
