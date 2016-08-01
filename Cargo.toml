@@ -1,5 +1,5 @@
 [package]
-name = "ransid"
+name = "ransidsole"
 version = "0.1.0"
 authors = ["Russell Mackenzie <russmackdev@gmail.com>"]
 description = "ANSI colour and styling for terminal text."
