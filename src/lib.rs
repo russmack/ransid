@@ -46,6 +46,137 @@ const BG_MAGENTA: u8 = 45;
 const BG_CYAN: u8 = 46;
 const BG_GRAY: u8 = 47;
 
+// Ref: https://en.wikipedia.org/wiki/Box-drawing_character
+pub const DRAW_HORIZONTAL_SHORT: &'static str = "─";
+pub const DRAW_HORIZONTAL_LONG: &'static str = "━ ";
+pub const DRAW_HORIZONTAL_THIN_DASHES_3: &'static str = "┄";
+pub const DRAW_HORIZONTAL_THIN_DASHES_4: &'static str = "┅";
+pub const DRAW_HORIZONTAL_THICK_DASHES_3: &'static str = "┈";
+pub const DRAW_HORIZONTAL_THICK_DASHES_4: &'static str = "┉";
+pub const DRAW_SKULL_CROSSBONES: &'static str = "☠";
+pub const DRAW_VERTICAL_THIN: &'static str = "│";
+pub const DRAW_VERTICAL_THICK: &'static str = "┃";
+pub const DRAW_VERTICAL_THIN_DASHES_3: &'static str = "┆";
+pub const DRAW_VERTICAL_THIN_DASHES_4: &'static str = "┊";
+pub const DRAW_VERTICAL_THICK_DASHES_3: &'static str = "┇";
+pub const DRAW_VERTICAL_THICK_DASHES_4: &'static str = "┋";
+// pub const DRAW_: &'static str ="┌"
+// pub const DRAW_: &'static str ="┍"
+// pub const DRAW_: &'static str ="┎"
+// pub const DRAW_: &'static str ="┏"
+// pub const DRAW_: &'static str ="┐"
+// pub const DRAW_: &'static str ="┑"
+// pub const DRAW_: &'static str ="┒"
+// pub const DRAW_: &'static str ="┓"
+// pub const DRAW_: &'static str ="└"
+// pub const DRAW_: &'static str ="┕"
+// pub const DRAW_: &'static str ="┖"
+// pub const DRAW_: &'static str ="┗"
+// pub const DRAW_: &'static str ="┘"
+// pub const DRAW_: &'static str ="┙"
+// pub const DRAW_: &'static str ="┚"
+// pub const DRAW_: &'static str ="┛"
+// pub const DRAW_: &'static str ="├"
+// pub const DRAW_: &'static str ="┝"
+// pub const DRAW_: &'static str ="┞"
+// pub const DRAW_: &'static str ="┟"
+// pub const DRAW_: &'static str ="┠"
+// pub const DRAW_: &'static str ="┡"
+// pub const DRAW_: &'static str ="┢"
+// pub const DRAW_: &'static str ="┣"
+// pub const DRAW_: &'static str ="┤"
+// pub const DRAW_: &'static str ="┥"
+// pub const DRAW_: &'static str ="┦"
+// pub const DRAW_: &'static str ="┧"
+// pub const DRAW_: &'static str ="┨"
+// pub const DRAW_: &'static str ="┩"
+// pub const DRAW_: &'static str ="┪"
+// pub const DRAW_: &'static str ="┫"
+// pub const DRAW_: &'static str ="┬"
+// pub const DRAW_: &'static str ="┭"
+// pub const DRAW_: &'static str ="┮"
+// pub const DRAW_: &'static str ="┯"
+// pub const DRAW_: &'static str ="┰"
+// pub const DRAW_: &'static str ="┱"
+// pub const DRAW_: &'static str ="┲"
+// pub const DRAW_: &'static str ="┳"
+// pub const DRAW_: &'static str ="┴"
+// pub const DRAW_: &'static str ="┵"
+// pub const DRAW_: &'static str ="┶"
+// pub const DRAW_: &'static str ="┷"
+// pub const DRAW_: &'static str ="┸"
+// pub const DRAW_: &'static str ="┹"
+// pub const DRAW_: &'static str ="┺"
+// pub const DRAW_: &'static str ="┻"
+// pub const DRAW_: &'static str ="┼"
+// pub const DRAW_: &'static str ="┽"
+// pub const DRAW_: &'static str ="┾"
+// pub const DRAW_: &'static str ="┿"
+// pub const DRAW_: &'static str ="╀"
+// pub const DRAW_: &'static str ="╁"
+// pub const DRAW_: &'static str ="╂"
+// pub const DRAW_: &'static str ="╃"
+// pub const DRAW_: &'static str ="╄"
+// pub const DRAW_: &'static str ="╅"
+// pub const DRAW_: &'static str ="╆"
+// pub const DRAW_: &'static str ="╇"
+// pub const DRAW_: &'static str ="╈"
+// pub const DRAW_: &'static str ="╉"
+// pub const DRAW_: &'static str ="╊"
+// pub const DRAW_: &'static str ="╋"
+// pub const DRAW_: &'static str ="╌"
+// pub const DRAW_: &'static str ="╍"
+// pub const DRAW_: &'static str ="╎"
+// pub const DRAW_: &'static str ="╏"
+// pub const DRAW_: &'static str ="═"
+// pub const DRAW_: &'static str ="║"
+// pub const DRAW_: &'static str ="╒"
+// pub const DRAW_: &'static str ="╓"
+// pub const DRAW_: &'static str ="╔"
+// pub const DRAW_: &'static str ="╕"
+// pub const DRAW_: &'static str ="╖"
+// pub const DRAW_: &'static str ="╗"
+// pub const DRAW_: &'static str ="╘"
+// pub const DRAW_: &'static str ="╙"
+// pub const DRAW_: &'static str ="╚"
+// pub const DRAW_: &'static str ="╛"
+// pub const DRAW_: &'static str ="╜"
+// pub const DRAW_CORNER_DOUBLE_BOTTOM_RIGHT: &'static str ="╝"
+// pub const DRAW_T_DOUBLE_STEM_RIGHT: &'static str ="╞"
+// pub const DRAW_T_DOUBLE_BAR_RIGHT: &'static str ="╟"
+// pub const DRAW_T_DOUBLE_RIGHT: &'static str ="╠"
+// pub const DRAW_T_DOUBLE_STEM_LEFT: &'static str ="╡"
+// pub const DRAW_T_DOUBLE_BAR_LEFT: &'static str ="╢"
+// pub const DRAW_T_DOUBLE_LEFT: &'static str ="╣"
+// pub const DRAW_T_DOUBLE_BAR_DOWN: &'static str ="╤"
+// pub const DRAW_T_DOUBLE_STEM_DOWN: &'static str ="╥"
+// pub const DRAW_T_DOUBLE_DOWN: &'static str ="╦"
+// pub const DRAW_T_DOUBLE_BAR_UP: &'static str ="╧"
+// pub const DRAW_T_DOUBLE_STEM_UP: &'static str ="╨"
+// pub const DRAW_T_DOUBLE_UP: &'static str ="╩"
+// pub const DRAW_: &'static str ="╪"
+// pub const DRAW_: &'static str ="╫"
+// pub const DRAW_: &'static str ="╬"
+// pub const DRAW_CORNER_ROUND_TOP_LEFT: &'static str ="╭"
+// pub const DRAW_CORNER_ROUND_TOP_RIGHT: &'static str ="╮"
+// pub const DRAW_CORNER_ROUND_BOTTOM_RIGHT: &'static str ="╯"
+// pub const DRAW_CORNER_ROUND_BOTTOM_LEFT: &'static str ="╰"
+// pub const DRAW_LINE_DIAGONAL_UP_RIGHT: &'static str ="╱"
+// pub const DRAW_LINE_DIAGONAL_DOWN_RIGHT: &'static str ="╲"
+// pub const DRAW_LINES_DIAGONAL_CROSS: &'static str ="╳"
+// pub const DRAW_: &'static str ="╴"
+// pub const DRAW_: &'static str ="╵"
+// pub const DRAW_: &'static str ="╶"
+// pub const DRAW_: &'static str ="╷"
+// pub const DRAW_: &'static str ="╸"
+// pub const DRAW_: &'static str ="╹"
+// pub const DRAW_: &'static str ="╺"
+// pub const DRAW_: &'static str ="╻"
+// pub const DRAW_: &'static str ="╼"
+// pub const DRAW_: &'static str ="╽"
+// pub const DRAW_: &'static str ="╾"
+// pub const DRAW_: &'static str ="╿"
+
 pub trait Anstring {
     fn get_anstring(&self, u8) -> String;
 
@@ -159,13 +290,6 @@ impl Anstring for String {
     }
 }
 
-// fn main() {
-// let s: String = "hello".to_owned();
-// let ss = s.bg_blue().black().blink_slow().underline();
-// println!("{}", ss);
-// }
-//
-
 // Omitted as poorly supported.
 //
 // Reset / Normal	 = 	0	  // 	all attributes off
@@ -204,5 +328,4 @@ impl Anstring for String {
 // ideogram attributes off	 = 	65	  // 	hardly ever supported, reset the effects of all of 60–64
 // Set foreground text color, high intensity	 = 	90–97	  // 	aixterm (not in standard)
 // Set background color, high intensity	 = 	100–107	  // 	aixterm (not in standard)
-//
 //
